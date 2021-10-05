@@ -6,7 +6,7 @@ app.set('view engine', 'ejs');
 var newItem=[];
 app.get('/', function(req, res){
    var today=new Date();
-   var options={
+   var options={  
        weekday:"long",
        day:"numeric",
        month:"long"
