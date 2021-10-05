@@ -1,15 +1,19 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
-        <% if(nameofday=="y"){ %>
-            <h1 style="color:green"><%= nameofday %> To Do list</h1>
-       
-            <% } else {%>
-       <h1 style="color:red"><%= nameofday %> To Do list</h1>
-       <%   }%>
+        <title>To Do list</title>
+        <h1 style="color:blueviolet">To Do list</h1>
+        <h2 style="color:green"><%= nameofday %> </h2>
     </head>
     <body>
-    
+        <ul>
+           <% for(var i=0;i<newItem.length;i++) { %>
+            <li><%=  newItem[i]  %></li>
+         <% } %>
+        </ul>
+          <form method="post" action="/">
+        <input type="text" name="newItem"/>
+        <input type="submit"/>
+        </form>
     </body>
 </html>
